@@ -61,6 +61,13 @@
   .card h3{font-size:1.4rem;font-weight:normal;margin-bottom:12px}
   .card p{color:var(--soft-ink);font-size:.96rem;flex-grow:1}
   .card .arrow{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--rose-deep);margin-top:22px;}
+  .card.card-split{text-decoration:none}
+  .card-split .sub-options{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+  .sub-option{display:flex;align-items:center;justify-content:space-between;gap:10px;text-decoration:none;color:var(--ink);background:var(--blush);border:1px solid var(--line);border-radius:10px;padding:14px 18px;transition:background .2s,border-color .2s,transform .2s;}
+  .sub-option:hover{background:var(--rose);border-color:var(--rose-deep);transform:translateX(2px)}
+  .sub-option .sub-label{font-size:.92rem}
+  .sub-option .sub-label small{display:block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--soft-ink);margin-top:2px;}
+  .sub-option .sub-arrow{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.78rem;color:var(--rose-deep);flex-shrink:0;}
   .booking{background:var(--rose);text-align:center}
   .booking h2{max-width:680px;margin-left:auto;margin-right:auto}
   .booking p{color:var(--ink);max-width:520px;margin:0 auto 36px;opacity:.85}
@@ -155,12 +162,21 @@
     <h2>Formas de <em>contato</em></h2>
     <div class="cards">
 
-      <a class="card" href="https://wa.me/554891888089?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta." target="_blank" rel="noopener">
-        <span class="num">01</span>
-        <h3>Marque sua consulta</h3>
-        <p>Seu atendimento individualizado começa aqui. Entre em contato com o consultório pelo WhatsApp e encontre o melhor horário para você.</p>
-        <span class="arrow">Falar no WhatsApp →</span>
-      </a>
+ <div class="card card-split">
+  <span class="num">01</span>
+  <h3>Marque sua consulta</h3>
+  <p>Seu atendimento individualizado começa aqui. Escolha a modalidade e fale direto pelo WhatsApp para encontrar o melhor horário para você.</p>
+  <div class="sub-options">
+    <a class="sub-option" href="https://wa.me/554891888089?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20online." target="_blank" rel="noopener">
+      <span class="sub-label">Consulta online<small>Atendimento por videochamada</small></span>
+      <span class="sub-arrow">→</span>
+    </a>
+    <a class="sub-option" href="https://wa.me/55489913-0622?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20presencial." target="_blank" rel="noopener">
+      <span class="sub-label">Consulta presencial<small>Florianópolis, SC</small></span>
+      <span class="sub-arrow">→</span>
+    </a>
+  </div>
+</div>
 
       <a class="card" href="https://forms.gle/WrdKpy6E6FiJA7J89" target="_blank" rel="noopener">
         <span class="num">02</span>
